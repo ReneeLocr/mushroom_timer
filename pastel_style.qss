@@ -1,0 +1,105 @@
+#root {
+    background-color: #efe0f3;
+    border: 10px solid #8A84E2;
+    border-radius: 18px;
+}
+
+#closeButton {
+    background-color: #AFAFDC;
+    border-style: outset;
+    border-width: 2px;
+    border-color: beige;
+    border-radius: 10px;
+    font: 40px;
+    font-family: "Super Joyful";
+    padding: 0px;
+    color: #0f0f2d;
+}
+#closeButton:hover {
+    background-color: #8A84E2;
+}
+
+QPushButton {
+    background-color: #AFAFDC;
+    border-style: outset;
+    border-width: 2px;
+    border-color: beige;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: "Super Joyful";
+    padding: 6px 18px;
+    color: #0f0f2d;
+}
+QPushButton:hover {
+    background-color: #8A84E2;
+}
+QPushButton:pressed {
+    background-color: #8A84E2;
+}
+
+#setupTitle {
+    font-family: "Super Joyful";
+    font-size: 30px;
+    color: #292293;
+    padding-bottom: 4px;
+}
+
+#mainTitle {
+    font-family: "Super Joyful";
+    font-size: 30px;
+    color: #292293;
+    padding-bottom: 4px;
+}
+
+#modeLabel {
+    font-family: "Super Joyful";
+    font-size: 30px;
+    color: #292293;
+    letter-spacing: 1px;
+}
+
+#timeLabel {
+    font-family: "Super Joyful";
+    font-size: 34px;
+    color: #292293;
+}
+
+#cycleLabel {
+    font-family: "Super Joyful";
+    font-size: 20px;
+    color: #292293;
+}
+
+#sliderTitle {
+    font-family: "Super Joyful";
+    font-size: 16px;
+    color: #292293;
+}
+
+#sliderValue {
+    font-family: "Super Joyful";
+    font-size: 16px;
+    color: #292293;
+}
+
+QSlider::groove:horizontal {
+    height: 6px;
+    background-color: #8A84E2;
+    border-radius: 3px;
+}
+QSlider::sub-page:horizontal {
+    height: 6px;
+    background-color: #292293;
+    border-radius: 3px;
+}
+QSlider::handle:horizontal {
+    background-color: #efe0f3;
+    width: 16px;
+    height: 16px;
+    margin: -6px 0;
+    border: 2px solid #292293;
+    border-radius: 9px;
+}
+QSlider::handle:horizontal:hover {
+    background-color: beige;
+}

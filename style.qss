@@ -1,0 +1,131 @@
+#root {
+    border-image: url(assets:frame_2.png) 12 12 12 12 stretch stretch;
+    border-width: 12px;
+}
+
+#closeButton {
+    background-color: transparent;
+    border: none;
+    image: url(assets:icon_close.png);
+    border-width: 8px;
+    font-family: "Return of the boss";
+    font-size: 40px;
+    color: #6b4a3a;
+}
+#closeButton:hover {
+    image: url(assets:icon_close_hover.png);
+    border-width: 8px;
+}
+
+#backButton {
+    background-color: transparent;
+    border: none;
+    image: url(assets:icon_back.png);
+    image-position: left;
+    font-family: "Return of the boss";
+    font-size: 11px;
+    color: #6b4a3a;
+    border-width: 8px;
+}
+#backButton:hover {
+    image: url(assets:icon_back_hover.png);
+    color: #4a3223;
+    border-width: 8px;
+}
+
+#mainTitle {
+    font-family: "Return of the boss";
+    font-size: 24px;
+    color: #6b4a3a;
+    padding-bottom: 4px;
+}
+
+#setupTitle {
+    font-family: "Return of the boss";
+    font-size: 18px;
+    color: #6b4a3a;
+    padding-bottom: 4px;
+}
+
+#modeLabel {
+    font-family: "Return of the boss";
+    font-size: 13px;
+    color: #b98a6a;
+    letter-spacing: 1px;
+}
+
+#timeLabel {
+    font-family: "Return of the boss";
+    font-size: 34px;
+    color: #6b4a3a;
+}
+
+#cycleLabel {
+    font-family: "Return of the boss";
+    font-size: 14px;
+    color: #6b4a3a;
+}
+
+#sliderTitle {
+    font-family: "Return of the boss";
+    font-size: 14px;
+    color: #6b4a3a;
+}
+
+#sliderValue {
+    font-family: "Return of the boss";
+    font-size: 14px;
+    color: #6b4a3a;
+}
+
+QSlider::groove:horizontal {
+    border-image: url(assets:slider_groove.png) 8 8 8 8 ;
+    border-width: 8px;
+}
+QSlider::sub-page:horizontal {
+    border-image: url(assets:slider_subpage.png) 8 8 8 8 stretch stretch;
+    border-width: 8px;
+}
+QSlider::handle:horizontal {
+    image: url(assets:slider_handle.png);
+    width: 20px;
+    height: 20px;
+    margin: -7px 0;
+}
+QSlider::handle:horizontal:hover {
+    image: url(assets:slider_handle_hover.png);
+}
+
+QPushButton {
+    border-image: url(assets:button.png) 8 8 8 8 stretch stretch;
+    border-width: 8px;
+    color: #6b4a3a;
+    font-family: "Return of the boss";
+    font-size: 11px;
+    padding: 10px 18px;
+}
+QPushButton:hover {
+    border-image: url(assets:button_hover.png) 8 8 8 8 stretch stretch;
+    border-width: 8px;
+}
+QPushButton:pressed {
+    border-image: url(assets:button_hover.png) 8 8 8 8 stretch stretch;
+    border-width: 8px;
+}
+
+#startButton {
+    border-image: url(assets:button.png) 8 8 8 8 stretch stretch;
+    color: #ffffff;
+    font-family: "Return of the boss";
+    font-size: 13px;
+    padding: 12px 18px;
+    border-width: 8px;
+}
+#startButton:hover {
+    border-image: url(assets:button_hover.png) 8 8 8 8 stretch stretch;
+    border-width: 8px;
+}
+#startButton:pressed {
+    border-image: url(assets:button_hover.png) 8 8 8 8 stretch stretch;
+    border-width: 8px;
+}

@@ -1,5 +1,5 @@
 #floatingContainer {
-    background-color: #AFAFDC;
+    background-color: #D9F69A;
     border-radius: 10px;
 }
 
@@ -14,10 +14,10 @@
     font: 40px;
     font-family: "Super Joyful";
     padding: 0px;
-    color: #0f0f2d;
+    color: #417130;
 }
 #floatingCloseBtn:hover {
-    color: #efe0f3;
+    color: #FFFDCD;
 }
 
 #floatingStart {
@@ -26,180 +26,180 @@
     font: 18px;
     font-family: "Super Joyful";
     padding: 0px;
-    color: #0f0f2d;
+    color: #417130;
 }
 #floatingStart:hover {
-    color: #efe0f3;
+    color: #FFFDCD;
 }
 
 #floatingModeLabel {
     font-family: "Super Joyful";
     font-size: 20px;
-    color: #292293;
+    color: #417130;
     letter-spacing: 1px;
 }
 
 #floatingTimeLabel {
     font-family: "Super Joyful";
     font-size: 30px;
-    color: #292293;
+    color: #7AB066;
     letter-spacing: 1px;
 }
 
 #root {
-    background-color: #efe0f3;
-    border: 10px solid #8A84E2;
+    background-color: #FFFC99;
+    border: 10px solid #B2EF9B;
     border-radius: 18px;
 }
 
 #closeButton {
-    background-color: #AFAFDC;
+    background-color: #D9F69A;
     border-style: outset;
     border-width: 2px;
-    border-color: beige;
+    border-color: #FFFDCD;
     border-radius: 10px;
     font: 40px;
     font-family: "Super Joyful";
     padding: 0px;
-    color: #0f0f2d;
+    color: #417130;
 }
 #closeButton:hover {
-    background-color: #8A84E2;
+    background-color: #B2EF9B;
 }
 
 #minimizeButton {
-    background-color: #AFAFDC;
+    background-color: #D9F69A;
     border-style: outset;
     border-width: 2px;
-    border-color: beige;
+    border-color: #FFFDCD;
     border-radius: 10px;
     font: 40px;
     font-family: "Super Joyful";
     padding: 0px;
-    color: #0f0f2d;
+    color: #417130;
 }
 #minimizeButton:hover {
-    background-color: #8A84E2;
+    background-color: #B2EF9B;
 }
 
 #pinButton {
-    background-color: #AFAFDC;
+    background-color: #D9F69A;
     border-style: outset;
     border-width: 2px;
-    border-color: beige;
+    border-color: #FFFDCD;
     border-radius: 10px;
     font: 20px;
     font-family: "Super Joyful";
     padding: 0px;
-    color: #0f0f2d;
+    color: #417130;
 }
 #pinButton:hover {
-    background-color: #8A84E2;
+    background-color: #B2EF9B;
 }
 
 QPushButton {
-    background-color: #AFAFDC;
+    background-color: #D9F69A;
     border-style: outset;
     border-width: 2px;
-    border-color: beige;
+    border-color: #FFFDCD;
     border-radius: 10px;
     font-size: 18px;
     font-family: "Super Joyful";
     padding: 6px 18px;
-    color: #0f0f2d;
+    color: #417130;
 }
 QPushButton:hover {
-    background-color: #8A84E2;
+    background-color: #B2EF9B;
 }
 QPushButton:pressed {
-    background-color: #8A84E2;
+    background-color: #B2EF9B;
 }
 
 #setupTitle {
     font-family: "Super Joyful";
     font-size: 30px;
-    color: #292293;
+    color: #7AB066;
     padding-bottom: 4px;
 }
 
 #mainTitle {
     font-family: "Super Joyful";
     font-size: 30px;
-    color: #292293;
+    color: #417130;
     padding-bottom: 4px;
 }
 
 #modeLabel {
     font-family: "Super Joyful";
     font-size: 30px;
-    color: #292293;
+    color: #417130;
     letter-spacing: 1px;
 }
 
 #timeLabel {
     font-family: "Super Joyful";
     font-size: 34px;
-    color: #292293;
+    color: #7AB066;
 }
 
 #cycleLabel {
     font-family: "Super Joyful";
     font-size: 20px;
-    color: #292293;
+    color: #417130;
 }
 
 #sliderTitle {
     font-family: "Super Joyful";
     font-size: 16px;
-    color: #292293;
+    color: #417130;
 }
 
 #sliderValue {
     font-family: "Super Joyful";
     font-size: 16px;
-    color: #292293;
+    color: #417130;
 }
 
 QSlider::groove:horizontal {
     height: 6px;
-    background-color: #8A84E2;
+    background-color: #B2EF9B;
     border-radius: 3px;
 }
 QSlider::sub-page:horizontal {
     height: 6px;
-    background-color: #292293;
+    background-color: #7AB066;
     border-radius: 3px;
 }
 QSlider::handle:horizontal {
-    background-color: #efe0f3;
+    background-color: #FFFC99;
     width: 16px;
     height: 16px;
     margin: -6px 0;
-    border: 2px solid #292293;
+    border: 2px solid #7AB066;
     border-radius: 9px;
 }
 QSlider::handle:horizontal:hover {
-    background-color: beige;
+    background-color: #FFFB7A;
 }
 
 QSlider::groove:vertical {
     width: 6px;
-    background-color: #292293;
+    background-color: #7AB066;
     border-radius: 3px;
 }
 QSlider::sub-page:vertical {
     width: 6px;
-    background-color: #8A84E2;
+    background-color: #B2EF9B;
     border-radius: 3px;
 }
 QSlider::handle:vertical {
-    background-color: #efe0f3;
+    background-color: #FFFC99;
     width: 16px;
     height: 16px;
     margin: -6px 0;
-    border: 2px solid #292293;
+    border: 2px solid #7AB066;
     border-radius: 9px;
 }
 QSlider::handle:vertical:hover {
-    background-color: beige;
+    background-color: #FFFB7A;
 }

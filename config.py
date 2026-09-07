@@ -1,4 +1,5 @@
 from pathlib import Path
+from enum import Enum
 
 BASE_DIR = Path(__file__).parent
 ASSETS = BASE_DIR / "assets"
@@ -24,3 +25,9 @@ VOLUME_ICON = "volume_black.png"
 WORK_MASCOT = "mascot_work.png"
 SHORT_BREAK_MASCOT = "mascot_short_break.png"
 LONG_BREAK_MASCOT = "mascot_long_break.png"
+
+
+class Mode(Enum):
+    WORK = "Work"
+    SHORT_BREAK = "Short break"
+    LONG_BREAK = "Long break"

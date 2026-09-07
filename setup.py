@@ -6,7 +6,11 @@ from PySide6.QtWidgets import (QLabel,
                                QWidget,
                                )
 
-from config import *
+from config import (DEFAULT_CYCLES,
+                    DEFAULT_LONG_BREAK_MIN,
+                    DEFAULT_SHORT_BREAK_MIN,
+                    DEFAULT_WORK_MIN,
+                    )
 from utils import LabeledSlider
 
 

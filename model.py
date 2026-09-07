@@ -1,4 +1,5 @@
 from PySide6.QtCore import QObject, Signal # type: ignore
+from config import Mode
 
 
 class PomodoroTimer(QObject):
@@ -13,7 +14,7 @@ class PomodoroTimer(QObject):
         self.long_break_min = long_break_min
         self.cycles_before_long_break = cycles_before_long_break
 
-        self.mode = "Work"
+        self.mode = Mode.WORK.value
         self.cycles_completed = 0
         self.seconds_left = self.work_min * 60
         self.running = False
@@ -24,9 +25,9 @@ class PomodoroTimer(QObject):
     
     def mode_label(self) -> str:
         labels = {
-            "Work": "Working Time",
-            "Short break": "Short Break",
-            "Long break": "Long Break",
+            Mode.WORK.value: "Working Time",
+            Mode.SHORT_BREAK.value: "Short Break",
+            Mode.LONG_BREAK.value: "Long Break",
         }
         return labels[self.mode]
 
@@ -54,7 +55,7 @@ class PomodoroTimer(QObject):
 
     def reset_timer(self):
         self.running = False
-        self.mode = "Work"
+        self.mode = Mode.WORK.value
         self.cycles_completed = 0
         self.seconds_left = self._duration_for_mode(self.mode) * 60
         self.state_changed.emit()
@@ -67,19 +68,19 @@ class PomodoroTimer(QObject):
         self.reset_timer()
 
     def _advance_mode(self):
-        if self.mode == "Work":
+        if self.mode == Mode.WORK.value:
             self.cycles_completed += 1
             if self.cycles_completed % self.cycles_before_long_break == 0:
-                self.mode = "Long break"
+                self.mode = Mode.LONG_BREAK.value
             else:
-                self.mode = "Short break"
+                self.mode = Mode.SHORT_BREAK.value
         else: 
-            self.mode = "Work"
+            self.mode = Mode.WORK.value
         self.seconds_left = self._duration_for_mode(self.mode) * 60
         self.mode_changed.emit()
 
     def _duration_for_mode(self, mode):
-        return {"Work": self.work_min,
-                "Short break": self.short_break_min,
-                "Long break": self.long_break_min,
+        return {Mode.WORK.value: self.work_min,
+                Mode.SHORT_BREAK.value: self.short_break_min,
+                Mode.LONG_BREAK.value: self.long_break_min,
                 }[mode]

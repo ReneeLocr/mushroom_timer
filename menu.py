@@ -6,7 +6,7 @@ from PySide6.QtWidgets import (QLabel,
                                )
 
 from utils import load_pixmap, scale_pixmap
-from config import *
+from config import DEFAULT_WORK_MIN, DEFAULT_SHORT_BREAK_MIN, DEFAULT_LONG_BREAK_MIN, DEFAULT_CYCLES
 
 
 class StartMenu(QWidget):

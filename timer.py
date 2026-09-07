@@ -7,7 +7,7 @@ from PySide6.QtWidgets import (QLabel,
                                QWidget,
                                )
 
-from config import *
+from config import ASSETS, Mode, WORK_MASCOT, SHORT_BREAK_MASCOT, LONG_BREAK_MASCOT
 from utils import load_pixmap, scale_pixmap
 
 
@@ -142,9 +142,9 @@ class TimerPage(QWidget):
         self.start_button.setText("Pause" if self.model.running else "Start")
 
     def _set_mascot_for_mode(self):
-        filename = {"Work": WORK_MASCOT,
-                    "Short break": SHORT_BREAK_MASCOT,
-                    "Long break": LONG_BREAK_MASCOT,
+        filename = {Mode.WORK.value: WORK_MASCOT,
+                    Mode.SHORT_BREAK.value: SHORT_BREAK_MASCOT,
+                    Mode.LONG_BREAK.value: LONG_BREAK_MASCOT,
                     }[self.model.mode]
         pix = load_pixmap(filename)
         self.mascot.setPixmap(scale_pixmap(pix, 140, 140))

@@ -11,8 +11,25 @@ from PySide6.QtWidgets import (QMainWindow,
                                )
 
 from model import PomodoroTimer
-from utils import *
-from config import *
+from utils import (load_pixmap, 
+                   load_font, 
+                   load_stylesheet, 
+                   FloatingWindow, 
+                   VolumeSlider,
+                   )
+from config import (GITHUB_ICON,
+                    IN_ICON,
+                    MAIL_ICON,
+                    VOLUME_ICON,
+                    DEFAULT_CYCLES,
+                    DEFAULT_LONG_BREAK_MIN,
+                    DEFAULT_SHORT_BREAK_MIN,
+                    DEFAULT_WORK_MIN,
+                    GITHUB_URL,
+                    LINKEDIN_URL,
+                    EMAIL_SUBJECT,
+                    EMAIL_ADDRESS,
+                    )
 from menu import StartMenu
 from setup import SetupPage
 from timer import TimerPage

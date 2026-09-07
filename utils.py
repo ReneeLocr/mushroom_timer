@@ -8,7 +8,7 @@ from PySide6.QtWidgets import (QLabel,
                                QSlider,
                                )
 
-from config import *
+from config import ASSETS, FONT_PATH, QSS_PATH
 
 def load_stylesheet():
     """Load the application's QSS stylesheet if it exists."""

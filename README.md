@@ -27,3 +27,8 @@ Also possible to customise the app & add stuff !
 
 ### Download the installer
 Work in progress... 
+
+## More things to come
+- Docstrings in the code and type ints
+- New mascots
+- Improved and full pixel art theme

@@ -23,8 +23,7 @@ Also possible to customise the app & add stuff !
 - Install PyInstaller in the virtual env
 - Run pyinstaller --windowed main.py
 - In main.spec: add the QSS files and assets folder in data, add icon and app name.
-
-
+<img width="552" height="656" alt="example" src="https://github.com/user-attachments/assets/e7ab9319-feb8-4a97-89fa-769f96990305" />
 
 ### Download the installer
 Work in progress... 

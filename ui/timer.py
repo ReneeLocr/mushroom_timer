@@ -7,8 +7,15 @@ from PySide6.QtWidgets import (QLabel,
                                QWidget,
                                )
 
-from config import ASSETS, Mode, WORK_MASCOT, SHORT_BREAK_MASCOT, LONG_BREAK_MASCOT
-from utils import load_pixmap, scale_pixmap
+from config import (ASSETS,
+                    Mode, 
+                    WORK_MASCOT, 
+                    SHORT_BREAK_MASCOT, 
+                    LONG_BREAK_MASCOT, 
+                    BUTTON_SIZE,
+                    MASCOT_SIZE_TIMER,
+                    )
+from utils.assets import load_pixmap, scale_pixmap
 
 
 class TimerPage(QWidget):
@@ -37,15 +44,15 @@ class TimerPage(QWidget):
         top_row = QHBoxLayout()
         back_button = QPushButton("Settings")
         back_button.setObjectName("backButton")
-        back_button.setFixedHeight(40)
+        back_button.setFixedHeight(BUTTON_SIZE)
         back_button.clicked.connect(self._back_clicked)
         menu_button = QPushButton("Menu")
         menu_button.setObjectName("menuButton")
-        menu_button.setFixedHeight(40)
+        menu_button.setFixedHeight(BUTTON_SIZE)
         menu_button.clicked.connect(self._menu_clicked)
         self.pin_button = QPushButton("📌")
         self.pin_button.setObjectName("pinButton")
-        self.pin_button.setFixedSize(40, 40)
+        self.pin_button.setFixedSize(BUTTON_SIZE, BUTTON_SIZE)
         self.pin_button.setCheckable(True)
         self.pin_button.clicked.connect(self._toggle_floating)
         top_row.addWidget(menu_button)
@@ -57,7 +64,7 @@ class TimerPage(QWidget):
 
         self.mascot = QLabel()
         self.mascot.setAlignment(Qt.AlignCenter)
-        self.mascot.setFixedHeight(140)
+        self.mascot.setFixedHeight(MASCOT_SIZE_TIMER)
         layout.addWidget(self.mascot)
         layout.addStretch()
 
@@ -147,4 +154,4 @@ class TimerPage(QWidget):
                     Mode.LONG_BREAK.value: LONG_BREAK_MASCOT,
                     }[self.model.mode]
         pix = load_pixmap(filename)
-        self.mascot.setPixmap(scale_pixmap(pix, 140, 140))
+        self.mascot.setPixmap(scale_pixmap(pix, MASCOT_SIZE_TIMER, MASCOT_SIZE_TIMER))

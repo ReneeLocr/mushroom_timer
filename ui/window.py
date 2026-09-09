@@ -10,12 +10,10 @@ from PySide6.QtWidgets import (QMainWindow,
                                QStackedWidget,
                                )
 
-from model import PomodoroTimer
-from utils import (load_pixmap, 
+from core.model import PomodoroTimer
+from utils.assets import (load_pixmap, 
                    load_font, 
                    load_stylesheet, 
-                   FloatingWindow, 
-                   VolumeSlider,
                    )
 from config import (GITHUB_ICON,
                     IN_ICON,
@@ -29,10 +27,16 @@ from config import (GITHUB_ICON,
                     LINKEDIN_URL,
                     EMAIL_SUBJECT,
                     EMAIL_ADDRESS,
+                    WINDOW_HEIGHT,
+                    WINDOW_WIDTH,
+                    BUTTON_SIZE,
+                    ICON_SIZE_LARGE,
+                    ICON_SIZE_SMALL,
                     )
-from menu import StartMenu
-from setup import SetupPage
-from timer import TimerPage
+from ui.menu import StartMenu
+from ui.setup import SetupPage
+from ui.timer import TimerPage
+from ui.widgets import FloatingWindow, VolumeSlider
 
 
 class MainPomodoroWindow(QMainWindow):
@@ -40,7 +44,7 @@ class MainPomodoroWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("Mushroom Timer 🍄")
-        self.setFixedSize(400, 540)
+        self.setFixedSize(WINDOW_WIDTH, WINDOW_HEIGHT)
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
 
@@ -53,33 +57,33 @@ class MainPomodoroWindow(QMainWindow):
         github_button = QPushButton("")
         github_button.setObjectName("githubButton")
         github_button.clicked.connect(self._github_clicked)
-        github_button.setFixedSize(40, 40)
-        size = QSize(25, 25)
+        github_button.setFixedSize(BUTTON_SIZE, BUTTON_SIZE)
+        size = QSize(ICON_SIZE_SMALL, ICON_SIZE_SMALL)
         pix = load_pixmap(GITHUB_ICON)
         github_button.setIcon(pix)
         github_button.setIconSize(size)
         linkedin_button = QPushButton("")
         linkedin_button.setObjectName("linkedinButton")
         linkedin_button.clicked.connect(self._linkedin_clicked)
-        linkedin_button.setFixedSize(40, 40)
-        size = QSize(25, 25)
+        linkedin_button.setFixedSize(BUTTON_SIZE, BUTTON_SIZE)
+        size = QSize(ICON_SIZE_SMALL, ICON_SIZE_SMALL)
         pix = load_pixmap(IN_ICON)
         linkedin_button.setIcon(pix)
         linkedin_button.setIconSize(size)
         mail_button = QPushButton("")
         mail_button.setObjectName("mailButton")
         mail_button.clicked.connect(self._sent_mail)
-        mail_button.setFixedSize(50, 40)
-        size = QSize(30, 30)
+        mail_button.setFixedSize(BUTTON_SIZE + 10, BUTTON_SIZE)
+        size = QSize(ICON_SIZE_LARGE, ICON_SIZE_LARGE)
         pix = load_pixmap(MAIL_ICON)
         mail_button.setIcon(pix)
         mail_button.setIconSize(size)
         self.volume_button = QPushButton("")
         self.volume_button.setObjectName("volButton")
-        self.volume_button.setFixedSize(40, 40)
+        self.volume_button.setFixedSize(BUTTON_SIZE, BUTTON_SIZE)
         self.volume_button.setCheckable(True)
         self.volume_button.clicked.connect(self._toggle_volume)
-        size = QSize(30, 30)
+        size = QSize(ICON_SIZE_LARGE, ICON_SIZE_LARGE)
         pix = load_pixmap(VOLUME_ICON)
         self.volume_button.setIcon(pix)
         self.volume_button.setIconSize(size)
@@ -131,16 +135,16 @@ class MainPomodoroWindow(QMainWindow):
 
         self.close_button = QPushButton("×", root) 
         self.close_button.setObjectName("closeButton")
-        self.close_button.setFixedSize(40, 40)
+        self.close_button.setFixedSize(BUTTON_SIZE, BUTTON_SIZE)
         self.close_button.clicked.connect(self.close)
-        self.close_button.move(340, 20)  
+        self.close_button.move(WINDOW_WIDTH - (20 + BUTTON_SIZE), 20)  
         self.close_button.raise_()
 
         self.minimize_button = QPushButton("-", root) 
         self.minimize_button.setObjectName("minimizeButton")
-        self.minimize_button.setFixedSize(40, 40)
+        self.minimize_button.setFixedSize(BUTTON_SIZE, BUTTON_SIZE)
         self.minimize_button.clicked.connect(self.showMinimized)
-        self.minimize_button.move(292, 20)  
+        self.minimize_button.move(WINDOW_WIDTH - (20 + BUTTON_SIZE * 2 + 8), 20)  
         self.minimize_button.raise_()
 
         self.setCentralWidget(root)

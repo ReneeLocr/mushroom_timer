@@ -10,8 +10,9 @@ from config import (DEFAULT_CYCLES,
                     DEFAULT_LONG_BREAK_MIN,
                     DEFAULT_SHORT_BREAK_MIN,
                     DEFAULT_WORK_MIN,
+                    BUTTON_SIZE,
                     )
-from utils import LabeledSlider
+from ui.widgets import LabeledSlider
 
 
 class SetupPage(QWidget):
@@ -28,7 +29,7 @@ class SetupPage(QWidget):
         menu_button = QPushButton("Menu")
         menu_button.setObjectName("menuButton")
         menu_button.clicked.connect(self._menu_clicked)
-        menu_button.setFixedHeight(40)
+        menu_button.setFixedHeight(BUTTON_SIZE)
         top_row.addWidget(menu_button)
         top_row.addStretch()
         layout.addLayout(top_row)

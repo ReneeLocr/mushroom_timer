@@ -5,8 +5,13 @@ from PySide6.QtWidgets import (QLabel,
                                QWidget,
                                )
 
-from utils import load_pixmap, scale_pixmap
-from config import DEFAULT_WORK_MIN, DEFAULT_SHORT_BREAK_MIN, DEFAULT_LONG_BREAK_MIN, DEFAULT_CYCLES
+from utils.assets import load_pixmap, scale_pixmap
+from config import (DEFAULT_WORK_MIN, 
+                    DEFAULT_SHORT_BREAK_MIN, 
+                    DEFAULT_LONG_BREAK_MIN, 
+                    DEFAULT_CYCLES,
+                    MASCOT_SIZE_MENU,
+                    )
 
 
 class StartMenu(QWidget):
@@ -28,10 +33,10 @@ class StartMenu(QWidget):
 
         self.mascot = QLabel()
         self.mascot.setAlignment(Qt.AlignCenter)
-        self.mascot.setFixedHeight(180)
+        self.mascot.setFixedHeight(MASCOT_SIZE_MENU)
         layout.addWidget(self.mascot)
         pix = load_pixmap("fungi-time.png")
-        self.mascot.setPixmap(scale_pixmap(pix, 180, 180))
+        self.mascot.setPixmap(scale_pixmap(pix, MASCOT_SIZE_MENU, MASCOT_SIZE_MENU))
         layout.addStretch(1)
 
         button_row = QVBoxLayout()

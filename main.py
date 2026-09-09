@@ -2,7 +2,7 @@ import sys
 
 from PySide6.QtWidgets import QApplication # type: ignore
 
-from window import MainPomodoroWindow
+from ui.window import MainPomodoroWindow
 
 def main():
     app = QApplication(sys.argv)

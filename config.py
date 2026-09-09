@@ -26,6 +26,14 @@ WORK_MASCOT = "mascot_work.png"
 SHORT_BREAK_MASCOT = "mascot_short_break.png"
 LONG_BREAK_MASCOT = "mascot_long_break.png"
 
+WINDOW_HEIGHT = 540
+WINDOW_WIDTH = 400
+ICON_SIZE_SMALL = 25
+ICON_SIZE_LARGE = 30
+MASCOT_SIZE_MENU = 180
+MASCOT_SIZE_TIMER = 140
+BUTTON_SIZE = 40
+
 
 class Mode(Enum):
     WORK = "Work"

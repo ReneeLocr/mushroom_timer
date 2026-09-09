@@ -22,6 +22,8 @@ IN_ICON = "linkedin_black.png"
 MAIL_ICON = "mail_black.png"
 VOLUME_ICON = "volume_black.png"
 
+APP_ICON = "fungi-time.ico"
+
 WORK_MASCOT = "mascot_work.png"
 SHORT_BREAK_MASCOT = "mascot_short_break.png"
 LONG_BREAK_MASCOT = "mascot_long_break.png"
